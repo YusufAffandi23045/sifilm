@@ -163,6 +163,7 @@
       background-color: #2C3E50;
       font-size: 16px;
       display: inline-block;
+      margin-bottom: 2px;
     }
     .button:hover {
       background-color: #1A252F;
@@ -220,7 +221,6 @@
         <h2>{{ $movie->title }}</h2>
         <p class="info"><strong>Deskripsi:</strong> {{ $movie->description }}</p>
         <p class="info"><strong>Tahun Rilis:</strong> {{ $movie->release_year }}</p>
-        <p class="info"><strong>Kategori:</strong> {{ $movie->category ? $movie->category->name : 'Tidak tersedia' }}</p>
         <p class="info"><strong>Genre:</strong> 
           @foreach($movie->genres as $genre)
             {{ $genre->name }}{{ !$loop->last ? ', ' : '' }}
@@ -232,6 +232,12 @@
       </div>
     </div>
   </div>
-
+  <script>
+    // Toggle dropdown menu
+    function toggleDropdown() {
+      var dropdown = document.getElementById("dropdownContent");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
