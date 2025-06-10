@@ -18,7 +18,10 @@
     
     /* Navbar start*/
     .navbar {
-      display: flex;
+      display: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
       justify-content: space-between;
       align-items: center;
       background-color: #2C3E50;
@@ -52,6 +55,7 @@
         outline: none;
         font-size: 16px;
         transition: 0.3s;
+        color: #2C3E50;
     }
 
     .search-form input:focus {
@@ -117,7 +121,7 @@
     .container {
       width: 90%;
       margin: auto;
-      padding: 20px 0;
+      padding: 80px 0 20px;
     }
     .carousel-container {
       width: 100%;
