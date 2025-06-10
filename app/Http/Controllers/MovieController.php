@@ -10,10 +10,7 @@ class MovieController extends Controller
 {
     public function index()
     {
-        // Mengambil 4 data film per halaman
         $movies = Movie::paginate(5);
-
-        // Ambil 5 film acak khusus untuk carousel (jika diperlukan)
         $posterMovies = Movie::inRandomOrder()->take(5)->get();
 
         return view('index', compact('movies', 'posterMovies'));
