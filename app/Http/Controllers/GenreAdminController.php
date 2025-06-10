@@ -24,7 +24,7 @@ class GenreAdminController extends Controller
 
         Genre::create(['name' => $request->name]);
 
-        return redirect('/admin')->with('success', 'Genre berhasil ditambahkan!');
+        return redirect('/admin/genres')->with('success', 'Genre berhasil ditambahkan!');
     }        
     
     public function edit($id)
