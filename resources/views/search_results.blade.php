@@ -240,23 +240,6 @@
       var dropdown = document.getElementById("dropdownContent");
       dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
     }
-    
-    // Carousel functionality
-    let currentIndex = 0;
-    const items = document.querySelectorAll('.carousel-item');
-    const totalItems = items.length;
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalItems;
-      updateCarousel();
-    }
-    function updateCarousel() {
-      const offset = -currentIndex * 100;
-      document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
-    }
-    
-    setInterval(nextSlide, 4000);
-    updateCarousel();
   </script>
 </body>
 </html>
