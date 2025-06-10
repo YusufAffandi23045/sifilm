@@ -166,7 +166,6 @@
                 <tr>
                     <th>Judul</th>
                     <th>Tahun</th>
-                    <th>Kategori</th>
                     <th>Rating</th>
                     <th>Aksi</th>
                 </tr>
@@ -176,7 +175,6 @@
                 <tr>
                     <td>{{ $movie->title }}</td>
                     <td>{{ $movie->release_year }}</td>
-                    <td>{{ $movie->category ? $movie->category->name : 'Tidak tersedia' }}</td>
                     <td>⭐ {{ $movie->rating }}</td>
                     <td class="actions">
                         <a href="{{ route('admin.show',['id' => $movie->id]) }}" class="button">👀 Lihat</a>
